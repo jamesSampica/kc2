@@ -1,0 +1,12 @@
+:root{
+    --kc-red: #e10600;
+    --kc-purple: #7a6c6f;
+}
+
+.navbar{
+    background-color: var(--kc-red);
+}
+
+footer {
+    background-color: var(--kc-purple);
+}

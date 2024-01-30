@@ -1,29 +1,35 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>@ViewData["Title"] - kc2</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/kc2.styles.css" asp-append-version="true" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="~/css/site.css">
 </head>
-<body>
+
+<body hx-boost="true">
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light border-bottom box-shadow mb-3">
             <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">kc2</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
+                <a class="navbar-brand" asp-area="" asp-page="/Index">
+                    <img title="Casey's Logo" alt="Casey's Logo"
+                        src="https://assets.caseys.com/m/21ddeb8754d1deb4/original/caseys-logo-2020.svg" class="logo">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
+                            <a class="nav-link" asp-area="" asp-page="/Menu">Menu</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Privacy">Privacy</a>
+                            <a class="nav-link" asp-area="" asp-page="/Deals">Deals</a>
                         </li>
                     </ul>
                 </div>
@@ -36,9 +42,186 @@
         </main>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - kc2 - <a asp-area="" asp-page="/Privacy">Privacy</a>
+    <footer class="PageFooter content-visibility">
+        <div class="full-site-width py-4 py-sm-0">
+            <ul class="SocialLinks list-inline PageFooter__socials d-flex d-sm-none px-6">
+                <li class="list-inline-item"><a data-automation-id="footerSocialLink"
+                        aria-label="Connect with us on instagram" href="https://www.instagram.com/caseys/"
+                        target="_blank" class="PageFooter__link"><span class="fa-icons fa-brands fa-instagram"
+                            aria-hidden="true"></span></a></li>
+                <li class="list-inline-item"><a data-automation-id="footerSocialLink"
+                        aria-label="Connect with us on facebook" href="https://www.facebook.com/caseys" target="_blank"
+                        class="PageFooter__link"><span class="fa-icons fa-brands fa-facebook-f"
+                            aria-hidden="true"></span></a></li>
+                <li class="list-inline-item"><a data-automation-id="footerSocialLink"
+                        aria-label="Connect with us on twitter" href="https://twitter.com/CaseysGenStore"
+                        target="_blank" class="PageFooter__link"><span class="fa-icons fa-brands fa-twitter"
+                            aria-hidden="true"></span></a></li>
+                <li class="list-inline-item"><a data-automation-id="footerSocialLink"
+                        aria-label="Connect with us on linkedin" href="https://www.linkedin.com/company/caseys/"
+                        target="_blank" class="PageFooter__link"><span class="fa-icons fa-brands fa-linkedin-in"
+                            aria-hidden="true"></span></a></li>
+                <li class="list-inline-item"><a data-automation-id="footerSocialLink"
+                        aria-label="Connect with us on youtube" href="https://www.youtube.com/user/CaseysGenStore"
+                        target="_blank" class="PageFooter__link"><span class="fa-icons fa-brands fa-youtube"
+                            aria-hidden="true"></span></a></li>
+            </ul>
+            <div class="PageFooter__upper-area d-flex">
+                <div class="PageFooter__upper-area_col">
+                    <ul class="list-unstyled mb-0">
+                        <li><a data-automation-id="footerGroupLink" href="/careers"
+                                class="link PageFooter__link mb-3 GA_footer_static_links">Careers</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Store positions"
+                                href="/careers/store-positions"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Store positions</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Life at Casey's" href="/careers/life-at-caseys"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Life at Casey's</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Benefits" href="/careers/benefits"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Benefits</a></li>
+                    </ul>
+                </div>
+                <div class="PageFooter__upper-area_col">
+                    <ul class="list-unstyled mb-0">
+                        <li><a data-automation-id="footerGroupLink" href="/community"
+                                class="link PageFooter__link mb-3 GA_footer_static_links">Community</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Donation requests"
+                                href="/community/donation-requests"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Donation requests</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Fundraising opportunities"
+                                href="/community/fundraising"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Fundraising
+                                opportunities</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Donate your points"
+                                href="/community/donate-your-points"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Donate your points</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Cash for classrooms grants"
+                                href="/community/cash-for-classrooms-grants"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Cash for classrooms
+                                grants</a></li>
+                    </ul>
+                </div>
+                <div class="PageFooter__upper-area_col">
+                    <ul class="list-unstyled mb-0">
+                        <li><a data-automation-id="footerGroupLink" href="/products-and-services"
+                                class="link PageFooter__link mb-3 GA_footer_static_links">Products</a></li>
+                        <li><a data-automation-id="footerGroupSublink" aria-label="Footer navigation - sub-link Fuels"
+                                href="/products-and-services/fuels"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Fuels</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Tobacco products"
+                                href="/products-and-services/tobacco-products"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Tobacco products</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Card services"
+                                href="/products-and-services/card-services"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Card services</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Gift cards"
+                                href="/products-and-services/gift-cards"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Gift cards</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link EV charging"
+                                href="/products-and-services/ev-charging-stations"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">EV charging</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Car wash"
+                                href="https://www.caseys.com/products-and-services/car-wash"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Car wash</a></li>
+                    </ul>
+                </div>
+                <div class="PageFooter__upper-area_col">
+                    <ul class="list-unstyled mb-0">
+                        <li><a data-automation-id="footerGroupLink" href="/corporate"
+                                class="link PageFooter__link mb-3 GA_footer_static_links">Corporate &amp; Real
+                                Estate</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link About us" href="/about-us"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">About us</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Investor relations"
+                                href="https://investor.caseys.com"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Investor relations</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Potential suppliers" href="/vendor-info"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Potential suppliers</a>
+                        </li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Sell us your convenience store"
+                                href="https://store.caseys.com/sell-us-your-convenience-store"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Sell us your convenience
+                                store</a></li>
+                        <li><a data-automation-id="footerGroupSublink"
+                                aria-label="Footer navigation - sub-link Real estate" href="/real-estate"
+                                class="PageFooter__link-sublink pb-2 GA_footer_static_links">Real estate</a></li>
+                    </ul>
+                </div>
+                <div class="PageFooter__upper-area_col"><a data-automation-id="footerIndividualLink"
+                        href="https://blog.caseys.com/" class="link PageFooter__link mb-3">Blog</a> <a
+                        data-automation-id="footerIndividualLink" href="/products-and-services/gift-cards"
+                        class="link PageFooter__link mb-3">Gift cards</a> <a data-automation-id="footerIndividualLink"
+                        href="https://www.caseys.com/faq" class="link PageFooter__link mb-3">FAQ</a> <a
+                        data-automation-id="footerIndividualLink" href="/contact"
+                        class="link PageFooter__link mb-3">Contact us</a>
+                    <ul class="SocialLinks list-inline d-none d-sm-block PageFooter__socials">
+                        <li class="list-inline-item"><a data-automation-id="footerSocialLink"
+                                aria-label="Connect with us on instagram" href="https://www.instagram.com/caseys/"
+                                target="_blank" class="PageFooter__link"><span class="fa-icons fa-brands fa-instagram"
+                                    aria-hidden="true"></span></a></li>
+                        <li class="list-inline-item"><a data-automation-id="footerSocialLink"
+                                aria-label="Connect with us on facebook" href="https://www.facebook.com/caseys"
+                                target="_blank" class="PageFooter__link"><span class="fa-icons fa-brands fa-facebook-f"
+                                    aria-hidden="true"></span></a></li>
+                        <li class="list-inline-item"><a data-automation-id="footerSocialLink"
+                                aria-label="Connect with us on twitter" href="https://twitter.com/CaseysGenStore"
+                                target="_blank" class="PageFooter__link"><span class="fa-icons fa-brands fa-twitter"
+                                    aria-hidden="true"></span></a></li>
+                        <li class="list-inline-item"><a data-automation-id="footerSocialLink"
+                                aria-label="Connect with us on linkedin" href="https://www.linkedin.com/company/caseys/"
+                                target="_blank" class="PageFooter__link"><span class="fa-icons fa-brands fa-linkedin-in"
+                                    aria-hidden="true"></span></a></li>
+                        <li class="list-inline-item"><a data-automation-id="footerSocialLink"
+                                aria-label="Connect with us on youtube"
+                                href="https://www.youtube.com/user/CaseysGenStore" target="_blank"
+                                class="PageFooter__link"><span class="fa-icons fa-brands fa-youtube"
+                                    aria-hidden="true"></span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="PageFooter__lower-area">
+                <div class="d-flex flex-wrap">
+                    <div class="PageFooter__lower-area_copyright order-last order-sm-first">©2024&nbsp;
+                        Casey's Retail Company. All Rights Reserved.&nbsp;<a data-automation-id="subfooterSitemapLink"
+                            href="/sitemap.xml" class="link PageFooter__subfooter_link font-weight-bold">Sitemap</a>
+                    </div>
+                    <div class="PageFooter__lower-area_links ml-sm-auto order-first order-sm-last">
+                        <ul class="PageFooter__subfooter mb-sm-0">
+                            <li class="PageFooter__subfooter_item"><a data-automation-id="subfooterLink"
+                                    href="/privacy-policy" class="link PageFooter__subfooter_link">Privacy policy</a>
+                            </li>
+                            <li class="PageFooter__subfooter_item"><a data-automation-id="subfooterLink"
+                                    href="/coupon-policy" class="link PageFooter__subfooter_link">Coupon policy</a></li>
+                            <li class="PageFooter__subfooter_item"><a data-automation-id="subfooterLink"
+                                    href="/accessibility" class="link PageFooter__subfooter_link">Accessibility</a></li>
+                            <li class="PageFooter__subfooter_item"><a data-automation-id="subfooterLink"
+                                    href="/terms-and-conditions" class="link PageFooter__subfooter_link">Terms &amp;
+                                    conditions</a></li>
+                            <li class="PageFooter__subfooter_item"><a data-automation-id="subfooterLink"
+                                    href="/rewards-terms-and-conditions" class="link PageFooter__subfooter_link">Casey's
+                                    rewards terms</a></li>
+                            <li class="PageFooter__subfooter_item"><a data-automation-id="subfooterLink"
+                                    href="https://store.caseys.com/media/cms/Nutrition-and-Ingredients.pdf"
+                                    class="link PageFooter__subfooter_link">Nutrition</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </footer>
 
@@ -48,4 +231,5 @@
 
     @await RenderSectionAsync("Scripts", required: false)
 </body>
+
 </html>
