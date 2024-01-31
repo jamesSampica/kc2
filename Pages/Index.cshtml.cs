@@ -14,6 +14,6 @@ public class IndexModel : PageModel
 
     public void OnGet()
     {
-
+        ViewData["Title"] = "Casey's Pizza, Food & Grocery Delivery";
     }
 }
